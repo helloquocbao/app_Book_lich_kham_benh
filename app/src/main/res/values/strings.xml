@@ -1,0 +1,71 @@
+<resources>
+    //title
+    <string name="app_name">Phòng Khám VIP</string>
+    <string name="home">Trang chủ</string>
+    <string name="menu">Danh mục</string>
+    <string name="introduce">Giới thệu chung</string>
+    <string name="contact">Liên hệ</string>
+    <string name="cart">Danh sách bác sĩ được chọn</string>
+    <string name="checkout">Thanh toán</string>
+    <string name="notify">Thông báo</string>
+    <string name="introduce_info_top">Thông tin về ứng dụng</string>
+    <string name="res_name">Phòng khám VIP, nơi kết nối giữa bác sĩ và bệnh nhân</string>
+    <string name="res_address">180 Hai Bà Trưng, Phường Đa Kao, Quận 1, TP.HCM</string>
+    <string name="res_phone">0337 662 557</string>
+    <string name="res_note">Góp ý, đóng góp và đánh giá</string>
+    <string name="res_note_valid">Bạn chưa nhập mô tả bệnh!</string>
+
+    <string name="continue_buy">Tiếp tục chọn bác sĩ tiếp theo</string>
+    <string name="buy">Chọn bác sĩ</string>
+    <string name="menu_detail_title">Chi tiết danh mục</string>
+    <string name="food_detail_title">Chi tiết bác sĩ</string>
+
+    <string name="checkout_info">Thông tin thanh toán</string>
+    <string name="user_name">Tên khách hàng</string>
+    <string name="user_email">Email</string>
+    <string name="user_phone">Số điện thoại</string>
+    <string name="user_note">mô tả bệnh</string>
+    <string name="type_user_name">Nhập tên khách hàng</string>
+    <string name="type_user_email">vd: appfood@gmail.com</string>
+    <string name="type_user_phone">Nhập số điện thoại</string>
+    <string name="type_user_note">Nhập lời nhắn...</string>
+
+    /label button
+    <string name="add_to_cart">Chọn bác sĩ này</string>
+    <string name="payment">Thanh toán</string>
+    <string name="payment_last">Thanh toán thôi!</string>
+    <string name="to_Home">Về trang chủ</string>
+    <string name="sent_mess">Gửi</string>
+    <string name="total_price">Tổng cộng:</string>
+    <string name="yes">Đồng ý</string>
+    <string name="no">Không</string>
+
+    //thông báo!!!
+    <string name="error_network">Không có Internet!</string>
+    <string name="error_server">Không thể kết nối với Server!</string>
+    <string name="empty_cart_notify">Danh sách bác sĩ trống!</string>
+    <string name="validation">Vui lòng nhập đầy đủ thông tin!</string>
+    <string name="none_name">Vui lòng nhập tên khách hàng!</string>
+    <string name="none_email">Vui lòng nhập email!</string>
+    <string name="none_phone">Vui lòng nhập số điện thoại!</string>
+    <string name="invalid_email">Email chưa đúng định dạng!</string>
+    <string name="overload_phone">Số điện thoại không được vượt quá</string>
+    <string name="char_style">ký tự</string>
+
+    <string name="order_send_success">Thành công!</string>
+    <string name="order_send_success_show">Thành công</string>
+    <string name="order_send_error">Lỗi khi gửi đơn hàng!</string>
+    <string name="empty_cart">Vui lòng chọn bác sĩ trước khi thanh toán!</string>
+    <string name="ask_to_delete">Bạn muốn xóa bác sĩ này này?</string>
+    <string name="mess_send_success">Đã gửi thành công!</string>
+    <string name="mess_send_error">Gửi không thành công!</string>
+    <string name="order_success">Đơn hàng của bạn đã được gửi đi!</string>
+
+    //link hình ảnh
+    <string name="slide_1">https://ngaymoionline.com.vn/stores/news_dataimages/luongtoan/092020/25/16/medium/5749_thuc-pham.png?rt=20200925165750</string>
+    <string name="slide_2">https://kenhhuongdan.com/wp-content/uploads/2019/06/hinh-anh-thuoc-giac-binh-an-769x449.jpg</string>
+    <string name="slide_3">https://ngaymoionline.com.vn/stores/news_dataimages/luongtoan/092020/25/16/medium/5749_thuc-pham.png?rt=20200925165750</string>
+    <string name="slide_4">https://kenhhuongdan.com/wp-content/uploads/2019/06/hinh-anh-thuoc-giac-binh-an-769x449.jpg</string>
+    <string name="title_activity_gioi_thieu_chung">GioiThieuChungActivity</string>
+
+</resources>
