@@ -129,7 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
-                        android:src="@drawable/nha_hang" />
+                        android:src="@drawable/phongkham" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView

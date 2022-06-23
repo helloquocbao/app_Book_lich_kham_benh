@@ -95,10 +95,10 @@
                         android:textStyle="bold" />
                     <TextView
                         android:textAlignment="center"
-                        android:text="@string/order_success"
+                        android:text="Yêu cầu của bán đã được kết nối tới bác sĩ"
                         android:layout_marginTop="@dimen/margin_1"
                         android:layout_marginBottom="@dimen/margin_1"
-                        android:textSize="@dimen/text_size_meidum"
+                        android:textSize="18dp"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:layout_width="match_parent"
@@ -124,7 +124,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/user_email"
+                        android:text="Địa chỉ"
                         android:textColor="@color/second"
                         android:textStyle="bold" />
                     <TextView
@@ -135,7 +135,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_1_2"
                         android:layout_marginBottom="@dimen/margin_1"
-                        android:text="email"
+                        android:text="dia chi "
                         android:textColor="@color/black"/>
                     <TextView
                         android:layout_gravity="center"
@@ -172,7 +172,7 @@
                         android:ellipsize="end"
                         android:maxLines="2"
                         android:layout_height="wrap_content"
-                        android:text="ghi chu "
+                        android:text="mo ta "
                         android:textColor="@color/black"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

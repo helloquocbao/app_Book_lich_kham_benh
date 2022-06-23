@@ -116,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:text="Món ngon mỗi ngày"
+                    android:text="Bác sĩ số một"
                     android:gravity="center"
                     android:textColor="@color/second"
                     android:textSize="@dimen/text_size_title"

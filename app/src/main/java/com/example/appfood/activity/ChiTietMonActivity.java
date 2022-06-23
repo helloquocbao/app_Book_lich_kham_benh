@@ -120,6 +120,7 @@ private  void xoaGioHang(){
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         gia_chitiet.setText(decimalFormat.format(Double.parseDouble(monResult.getGia()))+" đ");
         mota_chitiet.setText(monResult.getMota());
+        System.out.println("hinh anh :"+monResult.getHinhmon());
         Glide.with(getApplicationContext()).load(monResult.getHinhmon())
                 .placeholder(R.drawable.img_default)
                 .error(R.drawable.img_error)
@@ -129,6 +130,7 @@ private  void xoaGioHang(){
         ArrayAdapter<Integer> adapterSpin =
                 new ArrayAdapter<>(this,R.layout.spinner_item,soluong);
         spinner_soluong.setAdapter(adapterSpin);
+
     }
 
     private void actionToolbar() {

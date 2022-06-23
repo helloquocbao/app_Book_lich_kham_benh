@@ -168,7 +168,7 @@
                 android:layout_marginRight="@dimen/margin_1"
                 android:layout_marginBottom="@dimen/margin_1"
                 android:background="@drawable/custom_input"
-                android:hint="@string/type_user_note"
+                android:hint="Nhập gì đó"
                 android:inputType="textMultiLine"
                 android:lines="5"
                 android:maxLines="6"

@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_1_2"
                 android:singleLine="true"
-                android:text="Ten Mon"
+                android:text="Ten bac si"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/text_size_detail"
                 android:textStyle="bold" />
@@ -155,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="@dimen/padding_1"
-                android:text="Mo ta mon "
+                android:text="Mo ta bac si "
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size" />
         </ScrollView>

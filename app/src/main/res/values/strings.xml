@@ -1,6 +1,6 @@
 <resources>
     //title
-    <string name="app_name">Phòng Khám VIP</string>
+    <string name="app_name">Phòng Khám Quận 9</string>
     <string name="home">Trang chủ</string>
     <string name="menu">Danh mục</string>
     <string name="introduce">Giới thệu chung</string>
@@ -17,18 +17,18 @@
 
     <string name="continue_buy">Tiếp tục chọn bác sĩ tiếp theo</string>
     <string name="buy">Chọn bác sĩ</string>
-    <string name="menu_detail_title">Chi tiết danh mục</string>
+    <string name="menu_detail_title">Chi tiết danh mục bệnh</string>
     <string name="food_detail_title">Chi tiết bác sĩ</string>
 
     <string name="checkout_info">Thông tin thanh toán</string>
     <string name="user_name">Tên khách hàng</string>
-    <string name="user_email">Email</string>
+
     <string name="user_phone">Số điện thoại</string>
     <string name="user_note">mô tả bệnh</string>
     <string name="type_user_name">Nhập tên khách hàng</string>
-    <string name="type_user_email">vd: appfood@gmail.com</string>
+
     <string name="type_user_phone">Nhập số điện thoại</string>
-    <string name="type_user_note">Nhập lời nhắn...</string>
+
 
     /label button
     <string name="add_to_cart">Chọn bác sĩ này</string>
@@ -46,9 +46,8 @@
     <string name="empty_cart_notify">Danh sách bác sĩ trống!</string>
     <string name="validation">Vui lòng nhập đầy đủ thông tin!</string>
     <string name="none_name">Vui lòng nhập tên khách hàng!</string>
-    <string name="none_email">Vui lòng nhập email!</string>
+    <string name="none_email">Vui lòng nhập địa chỉ!</string>
     <string name="none_phone">Vui lòng nhập số điện thoại!</string>
-    <string name="invalid_email">Email chưa đúng định dạng!</string>
     <string name="overload_phone">Số điện thoại không được vượt quá</string>
     <string name="char_style">ký tự</string>
 
