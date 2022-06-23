@@ -48,7 +48,7 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ChiTietMonActivity"
+            android:name=".activity.ChiTietBacSiActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity

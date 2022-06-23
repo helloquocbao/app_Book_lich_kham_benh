@@ -18,5 +18,3 @@ private static String ipv4Address = "192.168.1.9"; ---> sửa ipv4Address = đ�
 
 Done...
 
-create by Tran Nguyen Nhat Nam
-Update : 30/10/2021

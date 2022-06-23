@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.appfood.R;
 import com.example.appfood.activity.ChiTietDanhMucActivity;
-import com.example.appfood.activity.ChiTietMonActivity;
 import com.example.lib.InterfaceResponsitory.ItemClickOptions;
 import com.example.lib.model.DanhMuc;
 

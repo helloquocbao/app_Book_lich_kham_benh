@@ -16,27 +16,27 @@ import com.bumptech.glide.Glide;
 import com.example.appfood.R;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
-import com.example.lib.model.Mon;
+import com.example.lib.model.BacSi;
 import com.example.lib.model.GioHang;
 
 
 import java.text.DecimalFormat;
 
-public class ChiTietMonActivity extends AppCompatActivity {
+public class ChiTietBacSiActivity extends AppCompatActivity {
 
-    Toolbar toolbar_Chitietmon;
-    ImageView hinhmon_chitiet;
-    TextView tenmon_chitiet,gia_chitiet,mota_chitiet;
+    Toolbar toolbar_Chitietbacsi;
+    ImageView hinhbacsi_chitiet;
+    TextView tenbacsi_chitiet,gia_chitiet,mota_chitiet;
     Button btn_mua;
     Spinner spinner_soluong;
 //    NotificationBadge thongbao_soluong;
     TextView thongbao_soluong;
-    Mon.Result monResult;
+    BacSi.Result bacsiResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chi_tiet_mon);
+        setContentView(R.layout.activity_chi_tiet_bac_si);
 
         getViewId();
         actionToolbar();
@@ -65,7 +65,7 @@ private  void xoaGioHang(){
 
         int solulistGiohangong = Integer.parseInt(spinner_soluong.getSelectedItem().toString());
         for (int i = 0; i < Show.listGiohang.size(); i++) {
-            if (Show.listGiohang.get(i).getMamon() == monResult.getId()) {
+            if (Show.listGiohang.get(i).getMabacsi() == bacsiResult.getId()) {
 
                 Show.listGiohang.remove(i);
 
@@ -78,7 +78,7 @@ private  void xoaGioHang(){
             boolean isExist = false;
             int soluong = Integer.parseInt(spinner_soluong.getSelectedItem().toString());
             for(int i = 0;i < Show.listGiohang.size(); i++ ) {
-                if(Show.listGiohang.get(i).getMamon() == monResult.getId()) {
+                if(Show.listGiohang.get(i).getMabacsi() == bacsiResult.getId()) {
                     isExist = true;
                     //cộng dồn
                     int checkSoluong = soluong + Show.listGiohang.get(i).getSoluong();
@@ -88,11 +88,11 @@ private  void xoaGioHang(){
             }
             if(!isExist) {
                 GioHang giohang = new GioHang();
-                giohang.setGia(Long.parseLong(monResult.getGia()));
-                giohang.setMamon(monResult.getId());
-                giohang.setTenmon(monResult.getTenmon());
-                giohang.setHinhmon(monResult.getHinhmon());
-                giohang.setMota(monResult.getMota());
+                giohang.setGia(Long.parseLong(bacsiResult.getGia()));
+                giohang.setMabacsi(bacsiResult.getId());
+                giohang.setTenbacsi(bacsiResult.getTenbacsi());
+                giohang.setHinhbacsi(bacsiResult.getHinhbacsi());
+                giohang.setMota(bacsiResult.getMota());
                 giohang.setSoluong(soluong);
                 //Thêm vào giỏ
                 Show.listGiohang.add(giohang);
@@ -100,11 +100,11 @@ private  void xoaGioHang(){
         }else{
             int soluong = Integer.parseInt(spinner_soluong.getSelectedItem().toString());
             GioHang giohang = new GioHang();
-            giohang.setGia(Long.parseLong(monResult.getGia()));
-            giohang.setMamon(monResult.getId());
-            giohang.setTenmon(monResult.getTenmon());
-            giohang.setHinhmon(monResult.getHinhmon());
-            giohang.setMota(monResult.getMota());
+            giohang.setGia(Long.parseLong(bacsiResult.getGia()));
+            giohang.setMabacsi(bacsiResult.getId());
+            giohang.setTenbacsi(bacsiResult.getTenbacsi());
+            giohang.setHinhbacsi(bacsiResult.getHinhbacsi());
+            giohang.setMota(bacsiResult.getMota());
             giohang.setSoluong(soluong);
             //Thêm vào giỏ
             Show.listGiohang.add(giohang);
@@ -115,15 +115,15 @@ private  void xoaGioHang(){
     }
 
     private void getChiTietMon() {
-        monResult = (Mon.Result) getIntent().getSerializableExtra("chitietmon");
-        tenmon_chitiet.setText(monResult.getTenmon());
+        bacsiResult = (BacSi.Result) getIntent().getSerializableExtra("chitietbacsi");
+        tenbacsi_chitiet.setText(bacsiResult.getTenbacsi());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-        gia_chitiet.setText(decimalFormat.format(Double.parseDouble(monResult.getGia()))+" đ");
-        mota_chitiet.setText(monResult.getMota());
-        Glide.with(getApplicationContext()).load(monResult.getHinhmon())
+        gia_chitiet.setText(decimalFormat.format(Double.parseDouble(bacsiResult.getGia()))+" đ");
+        mota_chitiet.setText(bacsiResult.getMota());
+        Glide.with(getApplicationContext()).load(bacsiResult.getHinhbacsi())
                 .placeholder(R.drawable.img_default)
                 .error(R.drawable.img_error)
-                .into(hinhmon_chitiet);
+                .into(hinhbacsi_chitiet);
 
         Integer[] soluong = new Integer[]{1};
         ArrayAdapter<Integer> adapterSpin =
@@ -132,9 +132,9 @@ private  void xoaGioHang(){
     }
 
     private void actionToolbar() {
-        setSupportActionBar(toolbar_Chitietmon);
+        setSupportActionBar(toolbar_Chitietbacsi);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar_Chitietmon.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbar_Chitietbacsi.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 xoaGioHang();
@@ -143,9 +143,9 @@ private  void xoaGioHang(){
         });
     }
     private void getViewId() {
-        toolbar_Chitietmon = findViewById(R.id.toolbar_Chitietmon);
-        hinhmon_chitiet = findViewById(R.id.hinhmon_chitiet);
-        tenmon_chitiet = findViewById(R.id.tenmon_chitiet);
+        toolbar_Chitietbacsi = findViewById(R.id.toolbar_Chitietbacsi);
+        hinhbacsi_chitiet = findViewById(R.id.hinhbacsi_chitiet);
+        tenbacsi_chitiet = findViewById(R.id.tenbacsi_chitiet);
         gia_chitiet = findViewById(R.id.gia_chitiet);
         mota_chitiet = findViewById(R.id.mota_chitiet);
         spinner_soluong = findViewById(R.id.spinner_soluong);

@@ -28,7 +28,7 @@ import com.example.lib.RetrofitClient;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.common.Url;
-import com.example.lib.model.Mon;
+import com.example.lib.model.BacSi;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     AppFoodMethods appFoodMethods;
 
-    List<Mon.Result> listMonNgauNhienResult;
+    List<BacSi.Result> listMonNgauNhienResult;
     MonNgauNhienAdapter monNgauNhienAdapter;
 
     boolean isLoading = false;

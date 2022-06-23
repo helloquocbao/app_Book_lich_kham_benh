@@ -1,21 +1,21 @@
 package com.example.appfood.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.appfood.R;
 import com.example.appfood.adapter.DanhMucAdapter;
-import com.example.lib.common.NetworkConnection;
-import com.example.lib.common.Show;
 import com.example.lib.InterfaceResponsitory.AppFoodMethods;
 import com.example.lib.RetrofitClient;
+import com.example.lib.common.NetworkConnection;
+import com.example.lib.common.Show;
 import com.example.lib.common.Url;
 import com.example.lib.model.DanhMuc;
 
