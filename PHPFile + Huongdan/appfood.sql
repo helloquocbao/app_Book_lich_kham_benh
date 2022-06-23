@@ -77,8 +77,7 @@ CREATE TABLE `donhang` (
 -- Dumping data for table `donhang`
 --
 
-INSERT INTO `donhang` (`id`, `tenkhachhang`, `email`, `sodienthoai`, `tongtien`, `ghichu`) VALUES
-(29, 'nam', 'nam@gmail.com', '337662557', 435000, 'bị bệnh gì đó, mô tả gì đó'),
+
 
 
 -- --------------------------------------------------------

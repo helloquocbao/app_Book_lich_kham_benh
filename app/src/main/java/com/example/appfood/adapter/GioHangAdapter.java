@@ -49,9 +49,9 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GetViewG
 //        Mon.Result monResult = listBeside.get(position);
         GioHang giohang = list.get(position);
 
-        holder.tenmon_giohang.setText(giohang.getTenbacsi());
+        holder.tenmon_giohang.setText(giohang.getTenmon());
         holder.soluong_mon.setText(giohang.getSoluong() +" ");
-        Glide.with(context).load(giohang.getHinhbacsi())
+        Glide.with(context).load(giohang.getHinhmon())
                 .placeholder(R.drawable.img_default)
                 .error(R.drawable.img_error)
                 .into(holder.hinhmon_giohang);

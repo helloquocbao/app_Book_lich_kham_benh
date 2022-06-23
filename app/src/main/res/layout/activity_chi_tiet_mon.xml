@@ -6,9 +6,9 @@
     android:background="@color/fifth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ChiTietBacSiActivity">
+    tools:context=".activity.ChiTietMonActivity">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_Chitietbacsi"
+        android:id="@+id/toolbar_Chitietmon"
         app:title="@string/food_detail_title"
         app:navigationIcon="@drawable/ic_back_button"
         app:titleTextColor="@color/white"
@@ -85,7 +85,7 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewChitietbacsi"
+            android:id="@+id/cardViewChitietmon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -96,7 +96,7 @@
             app:cardCornerRadius="@dimen/radius">
 
             <ImageView
-                android:id="@+id/hinhbacsi_chitiet"
+                android:id="@+id/hinhmon_chitiet"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/item_card_detail_height"
                 android:scaleType="fitXY"
@@ -105,7 +105,7 @@
         //Linear thong tin
         <LinearLayout
             android:id="@+id/linear_thongtin"
-            android:layout_below="@+id/cardViewChitietbacsi"
+            android:layout_below="@+id/cardViewChitietmon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_1"
@@ -116,7 +116,7 @@
             android:paddingRight="@dimen/padding_1">
 
             <TextView
-                android:id="@+id/tenbacsi_chitiet"
+                android:id="@+id/tenmon_chitiet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_1_2"
@@ -155,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="@dimen/padding_1"
-                android:text="Mo ta bacsi "
+                android:text="Mo ta mon "
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size" />
         </ScrollView>

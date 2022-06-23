@@ -24,7 +24,7 @@ import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.common.Url;
 import com.example.lib.common.Validate;
-import com.example.lib.model.BacSi;
+import com.example.lib.model.Mon;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,7 +45,7 @@ public class ThongTinKhachHangActivity extends AppCompatActivity {
     static TextView message_name;
     static TextView message_email;
     static TextView message_phone;
-    BacSi.Result monResult;
+    Mon.Result monResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,8 +113,8 @@ public class ThongTinKhachHangActivity extends AppCompatActivity {
                                             JSONObject jsonObject = new JSONObject();
                                             try {
                                                 jsonObject.put("madonhang",madonhang);
-                                                jsonObject.put("mamon",Show.listGiohang.get(i).getMabacsi());
-                                                jsonObject.put("tenmon",Show.listGiohang.get(i).getHinhbacsi());
+                                                jsonObject.put("mamon",Show.listGiohang.get(i).getMamon());
+                                                jsonObject.put("tenmon",Show.listGiohang.get(i).getTenmon());
                                                 jsonObject.put("gia",Show.listGiohang.get(i).getGia());
                                                 jsonObject.put("soluong",Show.listGiohang.get(i).getSoluong());
                                             } catch (JSONException e) {

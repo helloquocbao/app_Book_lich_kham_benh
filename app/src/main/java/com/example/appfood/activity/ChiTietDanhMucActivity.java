@@ -1,24 +1,27 @@
 package com.example.appfood.activity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.widget.TextView;
+
 import com.example.appfood.R;
 import com.example.appfood.adapter.ChiTietDanhMucAdapter;
+import com.example.appfood.adapter.MonNgauNhienAdapter;
 import com.example.lib.InterfaceResponsitory.AppFoodMethods;
 import com.example.lib.RetrofitClient;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.common.Url;
-import com.example.lib.model.BacSi;
 import com.example.lib.model.DanhMuc;
+import com.example.lib.model.Mon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +37,7 @@ public class ChiTietDanhMucActivity extends AppCompatActivity {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     AppFoodMethods appFoodMethods;
 
-    List<BacSi.Result> listMonTheoDanhMuc;
+    List<Mon.Result> listMonTheoDanhMuc;
     ChiTietDanhMucAdapter chiTietDanhMucAdapter;
 
     TextView thongbao_soluong;
@@ -78,8 +81,7 @@ public class ChiTietDanhMucActivity extends AppCompatActivity {
 //                super.onScrolled(recyclerView, dx, dy);
 //                if(!isLoading) {
 //                    if(linearLayoutManager.findLastCompletelyVisibleItemPosition() == listMonTheoDanhMuc.size() -1) {
-//                        isLoading =
-//                       ;
+//                        isLoading = true;
 //                        loadMore();
 //                    }
 //                }

@@ -13,19 +13,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.appfood.R;
-import com.example.appfood.activity.ChiTietBacSiActivity;
+import com.example.appfood.activity.ChiTietMonActivity;
 import com.example.lib.InterfaceResponsitory.ItemClickOptions;
-import com.example.lib.model.BacSi;
+import com.example.lib.model.Mon;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
 public class ChiTietDanhMucAdapter extends RecyclerView.Adapter<ChiTietDanhMucAdapter.GetViewChiTietDanhMuc> {
     Context context;
-    List<BacSi.Result> list;
+    List<Mon.Result> list;
 
 
-    public ChiTietDanhMucAdapter(Context context, List<BacSi.Result> list) {
+    public ChiTietDanhMucAdapter(Context context, List<Mon.Result> list) {
         this.context = context;
         this.list = list;
     }
@@ -41,20 +41,20 @@ public class ChiTietDanhMucAdapter extends RecyclerView.Adapter<ChiTietDanhMucAd
 
     @Override
     public void onBindViewHolder(@NonNull GetViewChiTietDanhMuc holder, int position) {
-        BacSi.Result monResult = list.get(position);
+        Mon.Result monResult = list.get(position);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.gia_danhmuc.setText(decimalFormat.format(Double.parseDouble(monResult.getGia()))+" đ");
-        holder.tenmon_danhmuc.setText(monResult.getTenbacsi());
+        holder.tenmon_danhmuc.setText(monResult.getTenmon());
         holder.mota_danhmuc.setText(monResult.getMota());
 
-        Glide.with(context).load(monResult.getHinhbacsi())
+        Glide.with(context).load(monResult.getHinhmon())
                 .placeholder(R.drawable.img_default)
                 .error(R.drawable.img_error)
                 .into(holder.hinhmon_danhmuc);
         holder.setItemClickOptions(new ItemClickOptions() {
             @Override
             public void onClickOptions(View view, int pos, int value) {
-                    Intent intent = new Intent(context, ChiTietBacSiActivity.class);
+                    Intent intent = new Intent(context,ChiTietMonActivity.class);
                     intent.putExtra("chitietmon",monResult);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);

@@ -3,12 +3,12 @@ package com.example.lib.model;
 import java.io.Serializable;
 import java.util.List;
 
-public class BacSi implements Serializable {
+public class Mon implements Serializable {
     public class Result implements Serializable {
         private int id;
         private int madanhmuc;
-        private String tenbacsi;
-        private String hinhbacsi;
+        private String tenmon;
+        private String hinhmon;
         private String mota;
         private String gia;
 
@@ -28,20 +28,20 @@ public class BacSi implements Serializable {
             this.madanhmuc = madanhmuc;
         }
 
-        public String getTenbacsi() {
-            return tenbacsi;
+        public String getTenmon() {
+            return tenmon;
         }
 
-        public void setTenbacsi(String tenbacsi) {
-            this.tenbacsi = tenbacsi;
+        public void setTenmon(String tenmon) {
+            this.tenmon = tenmon;
         }
 
-        public String getHinhbacsi() {
-            return hinhbacsi;
+        public String getHinhmon() {
+            return hinhmon;
         }
 
-        public void setHinhbacsi(String hinhbacsi) {
-            this.hinhbacsi = hinhbacsi;
+        public void setHinhmon(String hinhmon) {
+            this.hinhmon = hinhmon;
         }
 
         public String getMota() {
@@ -62,7 +62,7 @@ public class BacSi implements Serializable {
     }
     boolean success;
     String message;
-    List<BacSi.Result> result;
+    List<Mon.Result> result;
 
     public boolean isSuccess() {
         return success;

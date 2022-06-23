@@ -3,9 +3,9 @@ package com.example.lib.model;
 import java.io.Serializable;
 
 public class GioHang implements Serializable {
-    int mabacsi;
-    String tenbacsi;
-    String hinhbacsi;
+    int mamon;
+    String tenmon;
+    String hinhmon;
     String mota;
     long gia;
     int soluong;
@@ -13,37 +13,37 @@ public class GioHang implements Serializable {
     public GioHang() {
     }
 
-    public GioHang(int mabacsi, String tenbacsi, String hinhbacsi, String mota, long gia, int soluong) {
-        this.mabacsi = mabacsi;
-        this.tenbacsi = tenbacsi;
-        this.hinhbacsi = hinhbacsi;
+    public GioHang(int mamon, String tenmon, String hinhmon, String mota, long gia, int soluong) {
+        this.mamon = mamon;
+        this.tenmon = tenmon;
+        this.hinhmon = hinhmon;
         this.mota = mota;
         this.gia = gia;
         this.soluong = soluong;
     }
 
-    public int getMabacsi() {
-        return mabacsi;
+    public int getMamon() {
+        return mamon;
     }
 
-    public void setMabacsi(int mabacsi) {
-        this.mabacsi = mabacsi;
+    public void setMamon(int mamon) {
+        this.mamon = mamon;
     }
 
-    public String getTenbacsi() {
-        return tenbacsi;
+    public String getTenmon() {
+        return tenmon;
     }
 
-    public void setTenbacsi(String tenbacsi) {
-        this.tenbacsi = tenbacsi;
+    public void setTenmon(String tenmon) {
+        this.tenmon = tenmon;
     }
 
-    public String getHinhbacsi() {
-        return hinhbacsi;
+    public String getHinhmon() {
+        return hinhmon;
     }
 
-    public void setHinhbacsi(String hinhbacsi) {
-        this.hinhbacsi = hinhbacsi;
+    public void setHinhmon(String hinhmon) {
+        this.hinhmon = hinhmon;
     }
 
     public String getMota() {
