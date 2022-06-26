@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lib.model.GioHang;
+import com.example.lib.model.BacSiBook;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ public class Show {
         Toast.makeText(context, notify, Toast.LENGTH_SHORT).show();
     }
 
-    public static List<GioHang> listGiohang;
-//    public static List<Mon.Result> listBeside;
+    public static List<BacSiBook> listGiohang;
+
 
     public static int demSoLuongGioHang(int Options) {
         int dem = 0;

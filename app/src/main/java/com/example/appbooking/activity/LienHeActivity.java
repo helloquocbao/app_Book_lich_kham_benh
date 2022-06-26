@@ -1,4 +1,4 @@
-package com.example.appfood.activity;
+package com.example.appbooking.activity;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;

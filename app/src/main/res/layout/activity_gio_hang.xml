@@ -6,7 +6,7 @@
     android:background="@color/fifth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.GioHangActivity">
+    tools:context="com.example.appbooking.activity.GioHangActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarGiohang"
         app:title="@string/cart"

@@ -1,6 +1,5 @@
-package com.example.appfood.activity;
+package com.example.appbooking.activity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,20 +7,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.appbooking.adapter.ChiTietDanhMucAdapter;
 import com.example.appfood.R;
-import com.example.appfood.adapter.ChiTietDanhMucAdapter;
-import com.example.appfood.adapter.MonNgauNhienAdapter;
 import com.example.lib.InterfaceResponsitory.AppFoodMethods;
 import com.example.lib.RetrofitClient;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.common.Url;
 import com.example.lib.model.DanhMuc;
-import com.example.lib.model.Mon;
+import com.example.lib.model.BacSi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,17 +34,11 @@ public class ChiTietDanhMucActivity extends AppCompatActivity {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     AppFoodMethods appFoodMethods;
 
-    List<Mon.Result> listMonTheoDanhMuc;
+    List<BacSi.Result> listBacSiTheoDanhMuc;
     ChiTietDanhMucAdapter chiTietDanhMucAdapter;
 
     TextView thongbao_soluong;
 
-//    LinearLayoutManager linearLayoutManager;
-//    Handler handler = new Handler();
-//    boolean isLoading = false;
-
-//    int page = 1;
-//    int select = 5;
     int madanhmuc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,54 +60,14 @@ public class ChiTietDanhMucActivity extends AppCompatActivity {
         }
     }
 
-//    private void actionLoading() {
-//        recycleViewChiTietDanhMuc.addOnScrollListener(new RecyclerView.OnScrollListener() {
-//            @Override
-//            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-//                super.onScrollStateChanged(recyclerView, newState);
-//            }
-//
-//            @Override
-//            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-//                super.onScrolled(recyclerView, dx, dy);
-//                if(!isLoading) {
-//                    if(linearLayoutManager.findLastCompletelyVisibleItemPosition() == listMonTheoDanhMuc.size() -1) {
-//                        isLoading = true;
-//                        loadMore();
-//                    }
-//                }
-//            }
-//        });
-//    }
-
-//    private void loadMore() {
-//        handler.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                listMonTheoDanhMuc.add(null);
-//                chiTietDanhMucAdapter.notifyItemInserted(listMonTheoDanhMuc.size() - 1);
-//            }
-//        });
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                listMonTheoDanhMuc.remove(listMonTheoDanhMuc.size() - 1);
-//                chiTietDanhMucAdapter.notifyItemRemoved(listMonTheoDanhMuc.size());
-//                page += 1;
-//                getChiTietDanhMuc(page);
-//                chiTietDanhMucAdapter.notifyDataSetChanged();
-//                isLoading = false;
-//            }
-//        },1500);
-//    }
 
     private void khoitao() {
-        listMonTheoDanhMuc = new ArrayList<>();
-        appFoodMethods = RetrofitClient.getRetrofit(Url.AppFood_Url).create(AppFoodMethods.class);
+        listBacSiTheoDanhMuc = new ArrayList<>();
+        appFoodMethods = RetrofitClient.getRetrofit(Url.AppBooking_Url).create(AppFoodMethods.class);
 
         //set kiểu layout
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-//        linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+
         recycleView_ChiTietDanhMuc.setLayoutManager(layoutManager);
         recycleView_ChiTietDanhMuc.setHasFixedSize(true);
     }
@@ -130,8 +81,8 @@ public class ChiTietDanhMucActivity extends AppCompatActivity {
           .subscribe(
                   mon -> {
                       if (mon.isSuccess()) {
-                          listMonTheoDanhMuc = mon.getResult();
-                          chiTietDanhMucAdapter = new ChiTietDanhMucAdapter(this, listMonTheoDanhMuc);
+                          listBacSiTheoDanhMuc = mon.getResult();
+                          chiTietDanhMucAdapter = new ChiTietDanhMucAdapter(this, listBacSiTheoDanhMuc);
                           recycleView_ChiTietDanhMuc.setAdapter(chiTietDanhMucAdapter);
                           toolbar_Chitietdanhmuc.setTitle(danhmucResult.getTendanhmuc());
                       }

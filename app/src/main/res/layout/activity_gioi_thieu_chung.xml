@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/fifth"
     android:orientation="vertical"
-    tools:context=".activity.GioiThieuChungActivity">
+    tools:context="com.example.appbooking.activity.GioiThieuChungActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_Gioithieuchung"
         app:title="@string/introduce"

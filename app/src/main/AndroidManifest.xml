@@ -22,10 +22,10 @@
         android:theme="@style/Theme.AppFood"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.SuccessCheckoutActivity"
+            android:name="com.example.appbooking.activity.SuccessCheckoutActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.GioiThieuChungActivity"
+            android:name="com.example.appbooking.activity.GioiThieuChungActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <!--
@@ -40,31 +40,31 @@
         <!-- android:name="com.google.android.geo.API_KEY" -->
         <!-- android:value="@string/google_maps_key" /> -->
         <activity
-            android:name=".activity.ThongTinKhachHangActivity"
+            android:name="com.example.appbooking.activity.ThongTinKhachHangActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.GioHangActivity"
+            android:name="com.example.appbooking.activity.GioHangActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ChiTietMonActivity"
+            android:name="com.example.appbooking.activity.ChiTietBacSiActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ChiTietDanhMucActivity"
+            android:name="com.example.appbooking.activity.ChiTietDanhMucActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.LienHeActivity"
+            android:name="com.example.appbooking.activity.LienHeActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.DanhMucActivity"
+            android:name="com.example.appbooking.activity.DanhMucActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.example.appbooking.activity.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

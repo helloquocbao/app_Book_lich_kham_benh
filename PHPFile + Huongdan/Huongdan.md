@@ -9,7 +9,7 @@ Ví dụ : "D:\DOWNLOAD\XAMPP\htdocs"
 
 #3 PHPMyadmin tạo database mới tên : "appfood" 
 
-#4 Import file appfood.sql vào datase "appfood"  vừa tạo (chi tiết tra google)
+#4 Import file appfood.sql vào datase "appbooking"  vừa tạo (chi tiết tra google)
 
 #5 Mở code bằng Android studio, Vào Lib >java > com.example.lib > common > Url sửa :
 private static String ipv4Address = "192.168.1.9"; ---> sửa ipv4Address = địa chị IPv4 của máy cá nhân.

@@ -1,4 +1,4 @@
-package com.example.appfood.activity;
+package com.example.appbooking.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,16 +19,16 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.appbooking.adapter.BacSiNgauNhienAdapter;
+import com.example.appbooking.adapter.NavAdapter;
 import com.example.appfood.R;
-import com.example.appfood.adapter.MonNgauNhienAdapter;
-import com.example.appfood.adapter.NavAdapter;
 import com.example.lib.InterfaceResponsitory.AppFoodMethods;
 import com.example.lib.NavForm;
 import com.example.lib.RetrofitClient;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.common.Url;
-import com.example.lib.model.Mon;
+import com.example.lib.model.BacSi;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     AppFoodMethods appFoodMethods;
 
-    List<Mon.Result> listMonNgauNhienResult;
-    MonNgauNhienAdapter monNgauNhienAdapter;
+    List<BacSi.Result> listMonNgauNhienResult;
+    BacSiNgauNhienAdapter bacSiNgauNhienAdapter;
 
     boolean isLoading = false;
 
@@ -120,8 +120,8 @@ public class MainActivity extends AppCompatActivity {
                 mon -> {
                     if(mon.isSuccess()) {
                         listMonNgauNhienResult = mon.getResult();
-                        monNgauNhienAdapter = new MonNgauNhienAdapter(this,listMonNgauNhienResult);
-                        recycleView_MonNgauNhien.setAdapter(monNgauNhienAdapter);
+                        bacSiNgauNhienAdapter = new BacSiNgauNhienAdapter(this,listMonNgauNhienResult);
+                        recycleView_MonNgauNhien.setAdapter(bacSiNgauNhienAdapter);
                     }
                 },
                 throwable -> {
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void khoitao() {
         listMonNgauNhienResult = new ArrayList<>();
-        appFoodMethods = RetrofitClient.getRetrofit(Url.AppFood_Url).create(AppFoodMethods.class);
+        appFoodMethods = RetrofitClient.getRetrofit(Url.AppBooking_Url).create(AppFoodMethods.class);
 
         //set layout 2 cột
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);

@@ -1,6 +1,6 @@
 <?php
 	include "connect.php";
-	$query = "SELECT * FROM `mon`";
+	$query = "SELECT * FROM `bacsi` ORDER BY RAND() LIMIT 10 ";
 	$data = mysqli_query($conn, $query);
 	$result = array();
 

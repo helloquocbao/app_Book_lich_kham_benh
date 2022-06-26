@@ -1,4 +1,4 @@
-package com.example.appfood.adapter;
+package com.example.appbooking.adapter;
 
 import android.app.Activity;
 import android.content.Context;

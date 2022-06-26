@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$database = 'appfood';
+$database = 'appbooking';
 
 $conn = mysqli_connect($host, $user, $pass, $database); 
 mysqli_set_charset($conn, 'utf8');

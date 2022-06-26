@@ -1,4 +1,4 @@
-package com.example.appfood.adapter;
+package com.example.appbooking.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,7 +17,7 @@ import com.example.appfood.R;
 import com.example.lib.InterfaceResponsitory.ItemClickOptions;
 import com.example.lib.common.Show;
 import com.example.lib.model.EventBus.ActionEvent;
-import com.example.lib.model.GioHang;
+import com.example.lib.model.BacSiBook;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -26,10 +26,10 @@ import java.util.List;
 
 public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GetViewGioHang> {
     Context context;
-    List<GioHang> list;
+    List<BacSiBook> list;
     DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
 
-    public GioHangAdapter(Context context, List<GioHang> list) {
+    public GioHangAdapter(Context context, List<BacSiBook> list) {
         this.context = context;
         this.list = list;
     }
@@ -47,11 +47,11 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.GetViewG
     @Override
     public void onBindViewHolder(@NonNull GetViewGioHang holder, int position) {
 //        Mon.Result monResult = listBeside.get(position);
-        GioHang giohang = list.get(position);
+        BacSiBook giohang = list.get(position);
 
-        holder.tenmon_giohang.setText(giohang.getTenmon());
+        holder.tenmon_giohang.setText(giohang.getTenbacsi());
         holder.soluong_mon.setText(giohang.getSoluong() +" ");
-        Glide.with(context).load(giohang.getHinhmon())
+        Glide.with(context).load(giohang.getHinhbacsi())
                 .placeholder(R.drawable.img_default)
                 .error(R.drawable.img_error)
                 .into(holder.hinhmon_giohang);

@@ -6,7 +6,7 @@
     android:background="@color/fifth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ThongTinKhachHangActivity">
+    tools:context="com.example.appbooking.activity.ThongTinKhachHangActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarThanhToan"
         app:title="@string/checkout"

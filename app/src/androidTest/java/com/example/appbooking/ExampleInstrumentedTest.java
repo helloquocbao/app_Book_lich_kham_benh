@@ -1,4 +1,4 @@
-package com.example.appfood;
+package com.example.appbooking;
 
 import android.content.Context;
 

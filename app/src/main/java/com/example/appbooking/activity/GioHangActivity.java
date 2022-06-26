@@ -1,4 +1,4 @@
-package com.example.appfood.activity;
+package com.example.appbooking.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.appbooking.adapter.GioHangAdapter;
 import com.example.appfood.R;
-import com.example.appfood.adapter.GioHangAdapter;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.model.EventBus.ActionEvent;

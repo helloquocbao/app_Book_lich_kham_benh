@@ -1,8 +1,8 @@
 package com.example.lib.common;
 
 public class Url {
-    private static String ipv4Address = "10.0.159.131";
-    public static final String AppFood_Url = "http://"+ ipv4Address +"/AppFood/";
-    public static final String postUserInfo= "http://"+ ipv4Address +"/AppFood/thongtinkhachhang.php";
-    public static final String postBillDetail = "http://"+ ipv4Address +"/AppFood/chitietdonhang.php";
+    private static String ipv4Address = "10.0.153.164";
+    public static final String AppBooking_Url = "http://"+ ipv4Address +"/appbooking/";
+    public static final String postUserInfo= "http://"+ ipv4Address +"/appbooking/thongtinkhachhang.php";
+    public static final String postBillDetail = "http://"+ ipv4Address +"/appbooking/chitietdonhang.php";
 }

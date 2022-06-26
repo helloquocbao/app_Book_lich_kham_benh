@@ -1,4 +1,4 @@
-package com.example.appfood.activity;
+package com.example.appbooking.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,8 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.appbooking.adapter.DanhMucAdapter;
 import com.example.appfood.R;
-import com.example.appfood.adapter.DanhMucAdapter;
 import com.example.lib.common.NetworkConnection;
 import com.example.lib.common.Show;
 import com.example.lib.InterfaceResponsitory.AppFoodMethods;
@@ -72,7 +72,7 @@ public class DanhMucActivity extends AppCompatActivity {
 
     private void khoitao() {
         listDanhMucResult = new ArrayList<>();
-        appFoodMethods = RetrofitClient.getRetrofit(Url.AppFood_Url).create(AppFoodMethods.class);
+        appFoodMethods = RetrofitClient.getRetrofit(Url.AppBooking_Url).create(AppFoodMethods.class);
 
         //set layout 2 cột
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);

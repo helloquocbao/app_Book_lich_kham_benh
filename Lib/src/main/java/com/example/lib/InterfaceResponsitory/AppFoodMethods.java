@@ -1,7 +1,7 @@
 package com.example.lib.InterfaceResponsitory;
 
 import com.example.lib.model.DanhMuc;
-import com.example.lib.model.Mon;
+import com.example.lib.model.BacSi;
 
 import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.Field;
@@ -14,11 +14,11 @@ public interface AppFoodMethods {
     Observable<DanhMuc> GET_DanhMuc();
 
     @GET("monngaunhien.php")
-    Observable<Mon> GET_MonNgauNhien();
+    Observable<BacSi> GET_MonNgauNhien();
 
     @POST("chitietdanhmuc.php")
     @FormUrlEncoded
-    Observable<Mon> POST_MonTheoDanhMuc(
+    Observable<BacSi> POST_MonTheoDanhMuc(
 //            @Field("page") int page,
 //            @Field("select") int select,
             @Field("madanhmuc") int madanhmuc

@@ -6,7 +6,7 @@
     android:background="@color/fifth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ChiTietMonActivity">
+    tools:context="com.example.appbooking.activity.ChiTietBacSiActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_Chitietmon"
         app:title="@string/food_detail_title"
