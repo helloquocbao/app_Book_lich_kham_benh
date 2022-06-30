@@ -42,7 +42,7 @@ public class ChiTietBacSiActivity extends AppCompatActivity {
 
         //check network
         if(NetworkConnection.isConnected(this)) {
-            getChiTietMon();
+            getChiTietBacSi();
             Show.thayDoiSoLuongGioHangNho(thongbao_soluong);
             actionBuy();
         }else{
@@ -93,7 +93,6 @@ private  void xoaGioHang(){
                 giohang.setHinhbacsi(bacsiResult.getHinhbacsi());
                 giohang.setMota(bacsiResult.getMota());
                 giohang.setSoluong(soluong);
-                //Thêm vào giỏ
                 Show.listGiohang.add(giohang);
             }
         }else{
@@ -105,7 +104,7 @@ private  void xoaGioHang(){
             giohang.setHinhbacsi(bacsiResult.getHinhbacsi());
             giohang.setMota(bacsiResult.getMota());
             giohang.setSoluong(soluong);
-            //Thêm vào giỏ
+
             Show.listGiohang.add(giohang);
         }
         Show.thayDoiSoLuongGioHangNho(thongbao_soluong);
@@ -113,7 +112,7 @@ private  void xoaGioHang(){
         startActivity(thanhtoan);
     }
 
-    private void getChiTietMon() {
+    private void getChiTietBacSi() {
         bacsiResult = (BacSi.Result) getIntent().getSerializableExtra("chitietmon");
         tenbacsi_chitiet.setText(bacsiResult.getTenbacsi());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
